@@ -1,0 +1,6 @@
+
+# Private configs with API keys
+/etc/eww_weather
+*.pyc
+__pycache__/
+.DS_Store

@@ -1,0 +1,192 @@
+$bg-1: #12121f;
+$bg-2: #171728;
+$bg-3: #1d1d2f;
+$bg-4: #222236;
+$bg-5: #29293f;
+$fg: #d4d7ff;
+$grey-1: #4f5071;
+$grey-2: #595b7e;
+$grey-3: #63658b;
+$green: #7ed7c0;
+$yellow: #ecdfac;
+$blue: #87bff7;
+$cyan: #aaecf8;
+$purple: #9486e4;
+$red: #bd4277;
+
+* {
+  all: unset;
+}
+
+* {
+  font-family: "Z003", "Font-Awesome";
+}
+
+// Powermenu
+.powermenu {
+  font-size: 2em;
+
+  button {
+    padding: 0.5em;
+    border-radius: 25px 5px 25px 5px;
+    background-color: rgba($bg-3, 1);
+    color: rgba($fg, 1);
+
+    &:nth-child(1) {
+      &:hover {
+        transition:
+          200ms linear background-color,
+          border-radius;
+        color: rgba($blue, 1);
+        background-color: rgba($bg-2, 1);
+      }
+    }
+
+    &:nth-child(2) {
+      &:hover {
+        transition:
+          200ms linear background-color,
+          border-radius;
+        color: rgba($blue, 0.9);
+        background-color: rgba($bg-2, 1);
+      }
+    }
+
+    &:nth-child(3) {
+      &:hover {
+        transition:
+          200ms linear background-color,
+          border-radius;
+        color: rgba($yellow, 0.9);
+        background-color: rgba($bg-2, 1);
+      }
+    }
+
+    &:nth-child(4) {
+      &:hover {
+        transition:
+          200ms linear background-color,
+          border-radius;
+        color: rgba($red, 0.9);
+        background-color: rgba($bg-2, 1);
+      }
+    }
+
+    &:nth-child(5) {
+      &:hover {
+        transition:
+          200ms linear background-color,
+          border-radius;
+        color: rgba($red, 0.9);
+        background-color: rgba($bg-2, 1);
+      }
+    }
+  }
+}
+
+// Calendar
+.calendar {
+  font-size: 22;
+  background-color: rgba($bg-1, 0.9);
+  color: rgba($fg, 1);
+  border-radius: 12px;
+  margin: 2px;
+  padding: 5px;
+
+  &:selected {
+    background-color: rgba($fg, 1);
+    color: rgba($bg-1, 1);
+    border-radius: 16px;
+  }
+
+  &:indeterminate {
+    color: rgba($grey-1, 0.9);
+  }
+}
+
+.calendar_box {
+  background-color: rgba($bg-3, 1);
+  color: rgba($fg, 1);
+  // padding: 10px;
+  border-radius: 12px;
+  margin-top: -8px;
+}
+
+.calendar_layout_box {
+  background-color: rgba($bg-3, 1);
+  padding: 18px;
+  margin-top: -12px;
+}
+
+.calendar.highlight {
+  // background-color: rgba($bg-3, 1.0);
+  color: rgba($fg, 1);
+  font-weight: bold;
+  // border-radius: 22px 22px 0px 0px;
+}
+
+.time_box {
+  font-size: 22px;
+  background-color: rgba($bg-1, 1);
+  color: rgba($fg, 1);
+  margin-top: 5px;
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 20px 5px;
+}
+
+.bar {
+  background-color: #000000;
+  color: #1793D1;
+  border: 3px solid #ffffff;  
+  border-radius: 5px;
+
+}
+
+.ws-button-true {
+  background-color: #87bff7; /* Blue highlight from your palette */
+  color: #000000;            /* Black text */
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.ws-button-false {
+  color: #63658b;            /* Grey text for inactive */
+}
+
+/* --- Workspace Buttons --- */
+
+/* Inactive Workspaces (Ghostly/Grey) */
+.ws-button-false {
+  color: #1793D1; /* Dark grey */
+  transition: color 0.2s;
+  
+  /* Optional: Make them disappear if you don't like seeing 1-11 always */
+  /* opacity: 0.3; */ 
+}
+
+/* Active Workspaces (Highlighted) */
+.ws-button-true {
+  background-color: #87bff7; /* Blue highlight from your palette */
+  color: #000000;            /* Black text */
+  border-radius: 8px;        /* Rounded corners */
+  font-weight: bold;
+  min-width: 35px;           /* Make it a bit wider */
+}
+
+/* Effect when you hover over any button */
+.ws-button-true:hover,
+.ws-button-false:hover {
+  color: #ffffff;
+}
+
+.launcher-btn {
+  font-size: 24px; /* Makes the icon bigger */
+  margin-right: 5px;
+  transition: 300ms linear;
+}
+
+.launcher-btn:hover {
+  color: #1793D1; /* Blue hover color */
+}
