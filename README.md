@@ -21,3 +21,7 @@ Personal Sway WM configuration with Eww widgets and system monitoring scripts.
 ## 📁 Structure
 
 ## 📸 Screenshots
+
+![Screenshot 1](screenshot_2026-05-24_19-41-33.jpg)
+![Screenshot 2](screenshot_2026-05-24_19-41-42.jpg)
+![Screenshot 3](screenshot_2026-05-24_19-41-50.jpg)
