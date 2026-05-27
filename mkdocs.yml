@@ -1,0 +1,17 @@
+site_name: WgpArch Sway Config
+site_url: https://wgparch.codeberg.page/sway/
+theme:
+  name: material
+  palette:
+    primary: blue grey
+    accent: light blue
+  features:
+    - navigation.tabs
+    - navigation.expand
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Keybinds: keybinds.md
+  - Eww Bar & Scripts: eww.md
+  - Look & Feel: theming.md
+  - Gallery: gallery.md

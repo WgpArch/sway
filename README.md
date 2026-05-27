@@ -1,24 +1,31 @@
+# Sway Dotfiles
+
 <div align="center">
 
-  <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" alt="Arch Linux">
-  <img src="https://img.shields.io/badge/Wayland-00B4F0?style=for-the-badge&logo=wayland&logoColor=white" alt="Wayland">
-  <img src="https://img.shields.io/badge/Sway-00B4F0?style=for-the-badge&logo=sway&logoColor=white" alt="Sway">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
+[![View Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](https://wgparch.codeberg.page/sway/)
 
-  <br><br>
+<img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" alt="Arch Linux">
+<img src="https://img.shields.io/badge/Wayland-00B4F0?style=for-the-badge&logo=wayland&logoColor=white" alt="Wayland">
+<img src="https://img.shields.io/badge/Sway-00B4F0?style=for-the-badge&logo=sway&logoColor=white" alt="Sway">
+<img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
 
-  Tiling Wayland Compositor (i3-compatible) on Arch Linux.
+<br><br>
+
+Tiling Wayland Compositor (i3-compatible) on Arch Linux.
 
 </div>
 
 ---
 
+## ✨ Features
+- **Eww Bar:** Custom `eww` bar with Python workspace integration, bypassing Waybar limitations.
+- **Catppuccin Mocha:** Themed with the popular Catppuccin color palette.
+- **Window Rules:** Auto-floating, workspace assignment, and 30px rounded corners.
+- **Scratchpad:** Binded to Mod+Minus for quick terminal access.
 
-# Sway + Eww Config for Arch Linux
+## 📖 Documentation & Installation
 
-Personal Sway WM configuration with Eww widgets and system monitoring scripts.
-
-## 📁 Structure
+For full instructions, Eww bar philosophy, and keybinds, please visit the **[Official Documentation Website](https://wgparch.codeberg.page/sway/)**.
 
 ## 📸 Screenshots
 
