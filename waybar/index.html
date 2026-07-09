@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://wgparch.codeberg.page/sway/eww/">
+        <link rel="canonical" href="https://wgparch.codeberg.page/sway/waybar/">
       
       
-        <link rel="prev" href="../waybar/">
+        <link rel="prev" href="../installation/">
       
       
-        <link rel="next" href="../keybinds/">
+        <link rel="next" href="../eww/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>EWW - WgpArch Sway Config</title>
+        <title>Waybar - WgpArch Sway Config</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eww-bar-scripts" class="md-skip">
+        <a href="#waybar-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EWW
+              Waybar
             
           </span>
         </div>
@@ -223,7 +223,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../waybar/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -438,34 +438,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../waybar/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Waybar
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -485,7 +457,7 @@
   <span class="md-ellipsis">
     
   
-    EWW
+    Waybar
   
 
     
@@ -503,7 +475,7 @@
   <span class="md-ellipsis">
     
   
-    EWW
+    Waybar
   
 
     
@@ -529,10 +501,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-eww-bar-layout" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Eww Bar Layout
+        ✨ Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Configuration Files
       
     </span>
   </a>
@@ -543,7 +526,7 @@
   <a href="#how-to-enable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚙️ How to Enable
+        ️ How to Enable
       
     </span>
   </a>
@@ -554,6 +537,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eww/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EWW
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -674,10 +685,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-eww-bar-layout" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Eww Bar Layout
+        ✨ Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Configuration Files
       
     </span>
   </a>
@@ -688,7 +710,7 @@
   <a href="#how-to-enable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚙️ How to Enable
+        ️ How to Enable
       
     </span>
   </a>
@@ -712,16 +734,27 @@
 
 
 
-<h1 id="eww-bar-scripts">📊 Eww Bar &amp; Scripts</h1>
-<p>Sway's native IPC for workspaces can be stubborn with standard Waybars, often struggling to display persistent workspaces or update states cleanly without complex workarounds.</p>
-<p>To bypass this, this setup uses a custom <strong>Eww</strong> bar, designed to be lightweight and static, prioritizing stability over complex interactive widgets.</p>
-<h2 id="the-eww-bar-layout">The Eww Bar Layout</h2>
-<p>The bar is defined in <code>~/.config/eww/eww.yuck</code> and styled with <code>eww.scss</code>.</p>
-<h2 id="how-to-enable">⚙️ How to Enable</h2>
-<p>To use EWW instead of Waybar, open your main Sway <code>config</code> file, comment out the Waybar line, and uncomment the EWW line:</p>
+<h1 id="waybar-configuration">Waybar Configuration</h1>
+<p>Waybar is a lightweight, native Wayland status bar. It is the recommended choice for stability and seamless integration with Sway's workspace system.</p>
+<h2 id="features">✨ Features</h2>
+<ul>
+<li><strong>Persistent Workspaces:</strong> Always displays workspaces 1 through 11, even when empty.</li>
+<li><strong>Darkhighway Theme:</strong> Custom black background with orange borders and light blue text.</li>
+<li><strong>Weather Integration:</strong> Uses a custom Ruby script with a systemd timer for accurate local forecasts.</li>
+<li><strong>Dropdown Menus:</strong> Native support for calendar and CPU core tooltips.</li>
+</ul>
+<h2 id="configuration-files">📁 Configuration Files</h2>
+<p>All Waybar files are located in <code>configs/waybar/</code>:</p>
+<ul>
+<li><code>config.jsonc</code>: Module layout and IPC settings.</li>
+<li><code>style.css</code>: The Darkhighway CSS theme.</li>
+<li><code>scripts/</code>: Custom scripts for weather and player status.</li>
+</ul>
+<h2 id="how-to-enable">️ How to Enable</h2>
+<p>To use Waybar, open your main Sway <code>config</code> file and ensure the Waybar line is uncommented:</p>
 <p>```bash</p>
 <h1 id="-option-1-waybar-">--- OPTION 1: WAYBAR ---</h1>
-<h1 id="exec-waybar-c-configswayconfigswaybarconfigjsonc-s-configswayconfigswaybarstylecss">exec waybar -c ~/.config/sway/configs/waybar/config.jsonc -s ~/.config/sway/configs/waybar/style.css</h1>
+<p>exec waybar -c ~/.config/sway/configs/waybar/config.jsonc -s ~/.config/sway/configs/waybar/style.css</p>
 <h1 id="-option-2-eww-">--- OPTION 2: EWW ---</h1>
 <h1 id="start-eww-daemon">Start Eww daemon</h1>
 <pre><code>#exec --no-startup-id eww daemon
@@ -729,73 +762,6 @@
 <h1 id="open-the-bar">Open the bar</h1>
 <pre><code>#exec --no-startup-id eww open bar
 </code></pre>
-<h3 id="left">Left</h3>
-<ul>
-<li><strong>Launcher:</strong> Arch Linux icon (Rofi).</li>
-<li><strong>Workspaces:</strong> Dynamically generated via a Python script (<code>workspaces.py</code>), showing workspace IDs 1-10 with active/focused states.</li>
-</ul>
-<h3 id="center">Center</h3>
-<ul>
-<li><strong>Date &amp; Time:</strong> Updated every second via <code>defpoll</code>.</li>
-</ul>
-<h3 id="right">Right</h3>
-<ul>
-<li><strong>Weather:</strong> Current conditions via <code>weather.py</code>.</li>
-<li><strong>Network Status:</strong> Connection state via <code>network.sh</code>.</li>
-<li><strong>Battery Percentage:</strong> Via <code>battery.sh</code>.</li>
-<li><strong>RAM &amp; CPU Usage:</strong> Via <code>memory.sh</code> and <code>cpu.sh</code>.</li>
-<li><strong>Temperature:</strong> Via <code>temp.sh</code>.</li>
-<li><strong>Power Button:</strong> Launches <code>wlogout</code>.</li>
-</ul>
-<h2 id="why-no-hover-dropdownsplayers">🤔 Why No Hover Dropdowns/Players?</h2>
-<p>While Eww <em>can</em> support complex interactive popups (like weather forecasts or media player controls), implementing them requires writing custom Lisp-like logic, CSS popups, and additional daemon scripts. For a system monitor bar, the return on investment just isn't there. This setup intentionally opts for a <strong>clean, static layout</strong> that shows essential system stats at a glance without the overhead.</p>
-<h2 id="key-scripts">📜 Key Scripts</h2>
-<p>Located in <code>~/.config/scripts/system/</code> (Symlinked from <code>~/.dotfiles/sway/configs/scripts/system/</code>):</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Script</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>workspaces.py</code></td>
-<td style="text-align: left;">Listens to Sway IPC and outputs workspace JSON for the Eww bar.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>weather.py</code></td>
-<td style="text-align: left;">Fetches weather data for the Eww bar.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>cpu.sh</code> / <code>memory.sh</code></td>
-<td style="text-align: left;">Fetches CPU and RAM usage.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>battery.sh</code> / <code>network.sh</code> / <code>temp.sh</code></td>
-<td style="text-align: left;">Fetches battery, network, and temperature stats.</td>
-</tr>
-</tbody>
-</table>
-<p>Located in <code>~/.config/eww/modules/</code>:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Script</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>powermenu/eww.yuck</code></td>
-<td style="text-align: left;">Eww layout for the centered power menu.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>calendar/eww.yuck</code></td>
-<td style="text-align: left;">Eww layout for the calendar module.</td>
-</tr>
-</tbody>
-</table>
 
 
 
