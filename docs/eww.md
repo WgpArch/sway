@@ -8,6 +8,20 @@ To bypass this, this setup uses a custom **Eww** bar, designed to be lightweight
 
 The bar is defined in `~/.config/eww/eww.yuck` and styled with `eww.scss`.
 
+## ⚙️ How to Enable
+To use EWW instead of Waybar, open your main Sway `config` file, comment out the Waybar line, and uncomment the EWW line:
+
+```bash
+# --- OPTION 1: WAYBAR ---
+# exec waybar -c ~/.config/sway/configs/waybar/config.jsonc -s ~/.config/sway/configs/waybar/style.css
+
+# --- OPTION 2: EWW ---
+#Start Eww daemon
+    #exec --no-startup-id eww daemon
+
+#Open the bar
+    #exec --no-startup-id eww open bar
+
 ### Left
 - **Launcher:** Arch Linux icon (Rofi).
 - **Workspaces:** Dynamically generated via a Python script (`workspaces.py`), showing workspace IDs 1-10 with active/focused states.

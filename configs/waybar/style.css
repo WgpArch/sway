@@ -1,0 +1,278 @@
+/* ============================================
+   Waybar Style - Dark Highway Theme for Sway
+   Black background, Orange borders (taillights)
+   Light Blue text (headlights)
+   ============================================ */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Z003", "Font Awesome", "Nerd Font";
+    font-size: 15px;
+    min-height: 0;
+}
+
+/* Main waybar window */
+window#waybar {
+    background-color: #000000;
+    color: #89DDFF;
+    border-bottom: 2px solid #FF6347;
+    margin: 0;
+    padding: 0;
+}
+
+/* All modules - rounded blocks */
+#workspaces,
+#clock,
+#custom-weather,
+#network,
+#backlight,
+#pulseaudio,
+#cpu,
+#memory,
+#storage,
+#battery,
+#custom-launcher,
+#custom-notification,
+#tray,
+#custom-power,
+#power {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin: 2px 4px;
+}
+
+/* Hover effect - KEEP BORDERS ORANGE */
+#workspaces button:hover,
+#custom-launcher:hover,
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#custom-power:hover {
+    background-color: #0a0a0a;
+    border-color: #FF4500;  /* Changed from #89DDFF to ORANGE */
+}
+
+/* Workspace buttons - Shows numbers 1-11 */
+#workspaces button {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 6px;
+    padding: 0 8px;
+    margin: 2px 3px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background-color: #0a0a0a;
+    border-color: #FF4500;  /* Changed from #89DDFF to ORANGE */
+    color: #89DDFF;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: #FF6347;
+    color: #000000;
+    border-color: #FF6347;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #ff0000;
+}
+
+/* Launcher */
+#custom-launcher {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#custom-launcher:hover {
+    background-color: #FF6347;
+    color: #000000;
+    border-color: #FF6347;  /* Keep orange on hover */
+}
+
+/* Clock */
+#clock {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-weight: 600;
+}
+
+/* Weather */
+#custom-weather {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* PulseAudio */
+#pulseaudio {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+#pulseaudio.muted {
+    background-color: #000000;
+    color: #ff6b6b;
+}
+
+/* Music Player */
+#custom-player {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-weight: 600;
+}
+
+#custom-player:hover {
+    background-color: #0a0a0a;
+    border-color: #FF4500;  /* Changed from #89DDFF to ORANGE */
+}
+
+/* Battery */
+#battery {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+#battery.charging {
+    color: #66BB6A;
+}
+
+#battery.critical {
+    background-color: #000000;
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+/* CPU */
+#cpu {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Memory */
+#memory {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Storage */
+#storage {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Backlight */
+#backlight {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+/* Tray */
+#tray {
+    background-color: #000000;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 8px;
+    margin: 2px 4px;
+}
+
+/* Power button */
+#custom-power,
+#power {
+    background-color: #000000;
+    color: #FF6347;
+    border: 1px solid #FF4500;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#custom-power:hover,
+#power:hover {
+    background-color: #FF6347;
+    color: #000000;
+}
+
+/* Tooltip styling - ORANGE BORDERS */
+tooltip {
+    background-color: #000000;
+    border: 1px solid #FF4500;  /* Changed from #89DDFF to ORANGE */
+    border-radius: 8px;
+    padding: 8px;
+}
+
+tooltip label {
+    color: #89DDFF;
+    font-family: "Z003", "Hack Nerd Font";
+    font-size: 12px;
+}
+
+/* Calendar tooltip - ORANGE BORDERS */
+#calendar {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;  /* Already orange, good! */
+    border-radius: 8px;
+    font-family: "Z003", "Hack Nerd Font";
+    font-size: 12px;
+}
+
+#calendar.today {
+    background-color: #FF6347;
+    color: #000000;
+    font-family: "Z003", "Hack Nerd Font";
+    font-weight: bold;
+}
+
+/* Custom-notification */
+#custom-notification {
+    background-color: #000000;
+    color: #89DDFF;
+    border: 1px solid #FF4500;
+    border-radius: 6px;
+    padding: 0 8px;
+}

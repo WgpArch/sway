@@ -1,0 +1,185 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
+    "margin": "0 0 0 0",
+
+    "modules-left": [
+        "custom/launcher",
+        "sway/workspaces",
+        "tray"
+    ],
+    "modules-center": [
+        "clock", "custom/weather"
+
+    ],
+    "modules-right": [
+        "custom/player",
+        "backlight",
+        "pulseaudio",
+        "cpu",
+        "battery",
+        "custom/notification",
+        "memory",
+        "storage",
+        "custom/power"
+    ],
+
+   "sway/workspaces": {
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": [],
+			"10": [],
+                        "11": []
+		}
+	},
+
+   "custom/launcher": {
+        "format": "   ",
+        "on-click": "wofi --show drun",
+        "tooltip": true,
+        "tooltip-format": "btw 😎"
+    },
+
+    "custom/weather": {
+        "exec": "/etc/xdg/waybar/scripts/weather.py",
+        "interval": 300,
+        "return-type": "json",
+        "tooltip": true
+    },
+
+    "clock": {
+        "interval": 1,
+        "tooltip-format": "<big>{:%b %d}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%b %d %H:%M:%S %p}",
+        "format-alt": "{:%Y-%m-%d}",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "week-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span><b>{}</b></span>",
+                "days": "<span><b>{}</b></span>",
+                "weeks": "<span><b>W{}</b></span>",
+                "weekdays": "<span><b>{}</b></span>",
+                "today": "<span><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down"
+        }
+    },
+
+    "backlight": {
+        "format": "{icon} {percent: >1}%",
+        "format-icons": [" ", " "],
+        "on-scroll-down": "brightnessctl -c backlight set 5%-",
+        "on-scroll-up": "brightnessctl -c backlight set +5%"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+
+    "cpu": {
+        "format": "   {}%",
+        "interval": 5,
+        "on-click": "foot -e btop"
+    },
+
+    "memory": {
+        "format": "   {}%",
+        "interval": 5,
+        "on-click": "foot -e btop"
+    },
+
+    "storage": {
+        "format": "  {percentage_used}%",
+        "tooltip-format": "{used} | {total}",
+        "interval": 5
+    },
+
+    "battery": {
+        "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 20
+        },
+        "on-click-middle": "xfce-terminal acpi -i",
+        "format": "{icon}  {capacity}%",
+        "format-full": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{time}  {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon} ",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup><small></small></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup><small></small></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup><small></small></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup><small></small></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+
+    "custom/player": {
+        "format": "🎵 {}",
+        "exec": "~/.config/waybar/scripts/player.sh",
+        "interval": 3,
+        "max-length": 25,
+        "tooltip": true,
+        "return-type": "text"
+    },
+
+   "custom/power": {
+       "tooltip": false,
+       "on-click": "~/.config/wofi/powermenu.sh",
+       "format": "⏻"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 5
+    }
+}
