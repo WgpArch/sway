@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![View Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](https://wgparch.codeberg.page/sway/)
+[![View Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](https://wgparch.gitlab.io/sway/)
 
 <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" alt="Arch Linux">
 <img src="https://img.shields.io/badge/Wayland-00B4F0?style=for-the-badge&logo=wayland&logoColor=white" alt="Wayland">
@@ -18,14 +18,14 @@ Tiling Wayland Compositor (i3-compatible) on Arch Linux.
 ---
 
 ## ✨ Features
-- **Eww Bar:** Custom `eww` bar with Python workspace integration, bypassing Waybar limitations.
+- **Dual Bar Support:** Choose between Waybar (persistent workspaces, Darkhighway theme) or EWW (advanced customization).
 - **Catppuccin Mocha:** Themed with the popular Catppuccin color palette.
 - **Window Rules:** Auto-floating, workspace assignment, and 30px rounded corners.
 - **Scratchpad:** Binded to Mod+Minus for quick terminal access.
 
 ## 📖 Documentation & Installation
 
-For full instructions, Eww bar philosophy, and keybinds, please visit the **[Official Documentation Website](https://wgparch.codeberg.page/sway/)**.
+For full instructions, Waybar and EWW configuration, and keybinds, please visit the **[Official Documentation Website](https://wgparch.gitlab.io/sway/)**.
 
 ## 📸 Screenshots
 
