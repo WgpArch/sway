@@ -1,5 +1,5 @@
 site_name: WgpArch Sway Config
-site_url: https://wgparch.codeberg.page/sway/
+site_url: https://wgparch.gitlab.io/sway/
 theme:
   name: material
   palette:
